@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import DateTime from './pages/DateTime';
 import Committees from './pages/Committees';
+import CommitteeDetail from './pages/CommitteeDetail';
 import Application from './pages/Application';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
@@ -21,6 +22,7 @@ function App() {
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={ROUTES.DATETIME} element={<DateTime />} />
           <Route path={ROUTES.COMMITTEES} element={<Committees />} />
+          <Route path={ROUTES.COMMITTEE_DETAIL} element={<CommitteeDetail />} />
           <Route path={ROUTES.APPLICATION} element={<Application />} />
           <Route path={ROUTES.TEAM} element={<Team />} />
           <Route path={ROUTES.CONTACT} element={<Contact />} />

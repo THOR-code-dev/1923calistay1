@@ -56,12 +56,18 @@ const Footer: React.FC = () => {
             <div className="contact-info">
               <p className="contact-item">
                 <span className="contact-icon">📧</span>
-                <a href={`mailto:${CONTACT_INFO.email}`} className="contact-link">
-                  {CONTACT_INFO.email}
-                </a>
+                <span>{CONTACT_INFO.email}</span>
               </p>
               <p className="contact-item">
                 <span className="contact-icon">📞</span>
+                <span>İnsan Kaynakları Başkanı</span>
+              </p>
+              <p className="contact-item">
+                <span className="contact-icon">👤</span>
+                <span>Şehnaz TORAK</span>
+              </p>
+              <p className="contact-item">
+                <span className="contact-icon">📱</span>
                 <span>{CONTACT_INFO.phone}</span>
               </p>
             </div>
@@ -78,24 +84,6 @@ const Footer: React.FC = () => {
                   aria-label="Instagram"
                 >
                   📷
-                </a>
-                <a 
-                  href={CONTACT_INFO.socialMedia.twitter} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="social-link twitter"
-                  aria-label="Twitter"
-                >
-                  🐦
-                </a>
-                <a 
-                  href={CONTACT_INFO.socialMedia.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="social-link linkedin"
-                  aria-label="LinkedIn"
-                >
-                  💼
                 </a>
               </div>
             </div>

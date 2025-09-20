@@ -1,4 +1,5 @@
 import React from 'react';
+import { EVENT_INFO } from '../utils/constants';
 import './Team.css';
 
 const Team: React.FC = () => {
@@ -138,7 +139,12 @@ const Team: React.FC = () => {
                     <span>Teknoloji</span>
                   </div>
                 </div>
-                <a href="mailto:ekip@1923calistay.org" className="btn btn-primary">
+                <a 
+                  href={EVENT_INFO.applicationForm} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-primary"
+                >
                   Ekibe Katıl
                 </a>
               </div>

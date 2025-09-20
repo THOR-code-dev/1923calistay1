@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { COMMITTEES } from '../utils/constants';
 import './Committees.css';
 
@@ -9,33 +10,28 @@ const Committees: React.FC = () => {
         <div className="page-header">
           <h1 className="page-title">Komiteler</h1>
           <p className="page-subtitle">
-            10 farklı alanda derinlemesine tartışma ve öğrenme fırsatı
+            11 farklı alanda derinlemesine tartışma ve öğrenme fırsatı
           </p>
         </div>
 
         <div className="committees-grid">
           {COMMITTEES.map((committee) => (
-            <div key={committee.id} className="committee-card">
-              <div className="committee-icon">{committee.icon}</div>
-              <h3 className="committee-name">{committee.name}</h3>
-              <p className="committee-description">{committee.description}</p>
-              <div className="committee-footer">
-                <span className="committee-badge">Komite</span>
+            <Link 
+              key={committee.id} 
+              to={`/komiteler/${committee.id}`}
+              className="committee-card-link"
+            >
+              <div className="committee-card">
+                <div className="committee-icon">{committee.icon}</div>
+                <h3 className="committee-name">{committee.name}</h3>
+                <p className="committee-description">{committee.description}</p>
+                <div className="committee-footer">
+                  <span className="committee-badge">Komite</span>
+                  <span className="click-hint">Detaylar için tıklayın →</span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
-        </div>
-
-        <div className="committees-info">
-          <div className="info-card">
-            <h3>Komite Seçimi Nasıl Yapılır?</h3>
-            <ul>
-              <li>Başvuru formunda ilgi alanınıza göre 3 komite seçebilirsiniz</li>
-              <li>Komite seçiminizi yaparken kişisel ilginizi ve hedeflerinizi göz önünde bulundurun</li>
-              <li>Her komitede maksimum 15 katılımcı bulunacaktır</li>
-              <li>Komite atamaları başvuru sırasına ve uygunluğa göre yapılacaktır</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

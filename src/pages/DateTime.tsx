@@ -35,7 +35,7 @@ const DateTime: React.FC = () => {
                 <div className="info-icon">📍</div>
                 <h3>Mekan</h3>
                 <p className="info-value">{EVENT_INFO.location}</p>
-                <p className="info-detail">Detaylar yakında</p>
+                <p className="info-detail">Etkinlik yeri</p>
               </div>
               
               <div className="info-card">
@@ -63,12 +63,6 @@ const DateTime: React.FC = () => {
                 <div className="transport-icon">🚗</div>
                 <h4>Özel Araç</h4>
                 <p>Otopark imkanları ve yol tarifi detayları</p>
-              </div>
-              
-              <div className="transport-card">
-                <div className="transport-icon">🏨</div>
-                <h4>Konaklama</h4>
-                <p>Şehir dışından gelecekler için konaklama önerileri</p>
               </div>
             </div>
           </div>

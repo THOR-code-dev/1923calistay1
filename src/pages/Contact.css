@@ -2,6 +2,15 @@
 .contact-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* Hero Section */
@@ -77,6 +86,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  align-items: start;
 }
 
 .contact-card.modern {
@@ -89,6 +99,8 @@
   border: 1px solid rgba(196, 30, 58, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  height: fit-content;
+  min-height: 250px;
 }
 
 .contact-card.modern:hover {
@@ -125,6 +137,35 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.contact-text {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+
+.contact-card strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
 .contact-link {
@@ -132,6 +173,13 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  word-break: break-all;
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .contact-link:hover {
@@ -149,13 +197,18 @@
 .social-media-section {
   padding: 6rem 0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.9));
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+  clear: both;
 }
 
 .social-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .social-card.modern {
@@ -168,6 +221,9 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   border: 2px solid transparent;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
 .social-card.modern:hover {

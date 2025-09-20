@@ -87,31 +87,41 @@
 /* Contact Info */
 .contact-info {
   margin-bottom: var(--space-6);
+  max-width: 300px;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-2);
   margin-bottom: var(--space-3);
   color: rgba(255, 255, 255, 0.8);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-height: 24px;
+  line-height: 1.5;
 }
 
 .contact-icon {
   font-size: var(--font-lg);
   width: 24px;
   text-align: center;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .contact-link {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  font-size: 0.9rem;
+  display: inline;
 }
 
 .contact-link:hover {
-  color: var(--accent-gold);
-  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background: none;
+  border-radius: 0;
 }
 
 /* Social Media */
@@ -125,6 +135,7 @@
 .social-links {
   display: flex;
   gap: var(--space-3);
+  justify-content: flex-start;
 }
 
 .social-link {
@@ -151,16 +162,6 @@
 
 .social-link.instagram:hover {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  color: var(--primary-white);
-}
-
-.social-link.twitter:hover {
-  background: #1DA1F2;
-  color: var(--primary-white);
-}
-
-.social-link.linkedin:hover {
-  background: #0077B5;
   color: var(--primary-white);
 }
 

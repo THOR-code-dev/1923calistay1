@@ -7,55 +7,64 @@ const Schedule: React.FC = () => {
       time: '09:00 - 09:30',
       title: 'Kayıt ve Karşılama',
       description: 'Katılımcı kayıtları ve hoş geldin kahvaltısı',
-      type: 'registration'
+      type: 'registration',
+      location: 'Ana Giriş'
     },
     {
       time: '09:30 - 10:15',
       title: 'Açılış Töreni',
       description: 'Hoş geldin konuşması ve çalıştay tanıtımı',
-      type: 'ceremony'
+      type: 'ceremony',
+      location: 'Ana Konferans Salonu'
     },
     {
       time: '10:15 - 10:30',
       title: 'Kahve Molası',
       description: 'Tanışma ve networking',
-      type: 'break'
+      type: 'break',
+      location: 'Foyer Alanı'
     },
     {
       time: '10:30 - 12:00',
       title: 'Komite Tanıtımları',
       description: 'Her komitenin kendini tanıtması ve hedeflerinin paylaşılması',
-      type: 'presentation'
+      type: 'presentation',
+      location: 'Ana Konferans Salonu'
     },
     {
       time: '12:00 - 13:00',
       title: 'Öğle Yemeği',
       description: 'Yemek ve sosyalleşme',
-      type: 'meal'
+      type: 'meal',
+      location: 'Yemekhane'
     },
     {
       time: '13:00 - 15:30',
       title: 'İlk Komite Oturumları',
       description: 'Komitelerde ilk tartışmalar ve konu belirleme',
-      type: 'committee'
+      type: 'committee',
+      location: 'Komite Odaları'
     },
     {
       time: '15:30 - 15:45',
       title: 'Çay Molası',
       description: 'Kısa mola ve enerji tazeleme',
-      type: 'break'
+      type: 'break',
+      location: 'Foyer Alanı'
     },
     {
       time: '15:45 - 17:30',
       title: 'Workshop: Etkili İletişim',
       description: 'Demokratik tartışma teknikleri ve etkili sunum',
-      type: 'workshop'
+      type: 'workshop',
+      location: 'Workshop Salonu'
     },
     {
       time: '17:30 - 18:00',
       title: 'Gün Değerlendirmesi',
       description: 'İlk günün özetlenmesi ve ertesi gün planı',
-      type: 'evaluation'
+      type: 'evaluation',
+      location: 'Ana Konferans Salonu'
     }
   ];
 
@@ -64,55 +73,64 @@ const Schedule: React.FC = () => {
       time: '09:00 - 09:30',
       title: 'Günaydın Kahvesi',
       description: 'Güne enerjik başlangıç',
-      type: 'break'
+      type: 'break',
+      location: 'Foyer Alanı'
     },
     {
       time: '09:30 - 11:30',
       title: 'Komite Çalışmaları',
       description: 'Derinlemesine tartışmalar ve çözüm önerileri',
-      type: 'committee'
+      type: 'committee',
+      location: 'Komite Odaları'
     },
     {
       time: '11:30 - 11:45',
       title: 'Kahve Molası',
       description: 'Kısa dinlenme',
-      type: 'break'
+      type: 'break',
+      location: 'Foyer Alanı'
     },
     {
       time: '11:45 - 13:00',
       title: 'Sunum Hazırlığı',
       description: 'Komitelerin final sunumlarını hazırlaması',
-      type: 'preparation'
+      type: 'preparation',
+      location: 'Komite Odaları'
     },
     {
       time: '13:00 - 14:00',
       title: 'Öğle Yemeği',
       description: 'Son yemek ve sohbet',
-      type: 'meal'
+      type: 'meal',
+      location: 'Yemekhane'
     },
     {
       time: '14:00 - 16:00',
       title: 'Final Sunumları',
       description: 'Her komitenin çalışmalarını sunması',
-      type: 'presentation'
+      type: 'presentation',
+      location: 'Ana Konferans Salonu'
     },
     {
       time: '16:00 - 16:15',
       title: 'Çay Molası',
       description: 'Son mola',
-      type: 'break'
+      type: 'break',
+      location: 'Foyer Alanı'
     },
     {
       time: '16:15 - 17:00',
       title: 'Kapanış Töreni',
       description: 'Sertifika töreni ve veda konuşmaları',
-      type: 'ceremony'
+      type: 'ceremony',
+      location: 'Ana Konferans Salonu'
     },
     {
       time: '17:00 - 17:30',
       title: 'Fotoğraf Çekimi ve Veda',
       description: 'Hatıra fotoğrafları ve vedalaşma',
-      type: 'social'
+      type: 'social',
+      location: 'Foyer Alanı'
     }
   ];
 
@@ -132,8 +150,20 @@ const Schedule: React.FC = () => {
     }
   };
 
-  const getTypeClass = (type: string) => {
-    return `schedule-item-${type}`;
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'registration': return '#3B82F6';
+      case 'ceremony': return '#DC2626';
+      case 'break': return '#059669';
+      case 'presentation': return '#7C3AED';
+      case 'meal': return '#EA580C';
+      case 'committee': return '#C41E3A';
+      case 'workshop': return '#0891B2';
+      case 'evaluation': return '#7C2D12';
+      case 'preparation': return '#4338CA';
+      case 'social': return '#BE185D';
+      default: return '#6B7280';
+    }
   };
 
   return (
@@ -184,52 +214,35 @@ const Schedule: React.FC = () => {
           {/* 1. Gün */}
           <div className="day-section">
             <div className="day-header">
-              <h2 className="day-title">
+              <div className="day-title-wrapper">
                 <span className="day-number">1</span>
-                <span className="day-name">Birinci Gün</span>
-              </h2>
-              <p className="day-description">Tanışma, komite oluşumu ve ilk tartışmalar</p>
+                <div className="day-info">
+                  <h2 className="day-title">Birinci Gün</h2>
+                  <p className="day-description">Tanışma, komite oluşumu ve ilk tartışmalar</p>
+                </div>
+              </div>
             </div>
             
             <div className="schedule-timeline">
               {day1Schedule.map((item, index) => (
-                <div key={index} className={`schedule-item ${getTypeClass(item.type)}`}>
+                <div key={index} className="schedule-item">
                   <div className="schedule-time">
                     <span className="time-text">{item.time}</span>
                   </div>
                   <div className="schedule-content-item">
-                    <div className="schedule-icon">{getTypeIcon(item.type)}</div>
-                    <div className="schedule-details">
-                      <h4 className="schedule-title">{item.title}</h4>
-                      <p className="schedule-description">{item.description}</p>
+                    <div 
+                      className="schedule-icon" 
+                      style={{ backgroundColor: getTypeColor(item.type) }}
+                    >
+                      {getTypeIcon(item.type)}
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 2. Gün */}
-          <div className="day-section">
-            <div className="day-header">
-              <h2 className="day-title">
-                <span className="day-number">2</span>
-                <span className="day-name">İkinci Gün</span>
-              </h2>
-              <p className="day-description">Derinlemesine çalışma, sunumlar ve kapanış</p>
-            </div>
-            
-            <div className="schedule-timeline">
-              {day2Schedule.map((item, index) => (
-                <div key={index} className={`schedule-item ${getTypeClass(item.type)}`}>
-                  <div className="schedule-time">
-                    <span className="time-text">{item.time}</span>
-                  </div>
-                  <div className="schedule-content-item">
-                    <div className="schedule-icon">{getTypeIcon(item.type)}</div>
                     <div className="schedule-details">
                       <h4 className="schedule-title">{item.title}</h4>
                       <p className="schedule-description">{item.description}</p>
+                      <div className="schedule-location">
+                        <span className="location-icon">📍</span>
+                        <span>{item.location}</span>
+                      </div>
                     </div>
                   </div>
                 </div>

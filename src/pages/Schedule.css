@@ -1,60 +1,114 @@
-.schedule-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  position: relative;
+/* Program Akışı Sayfası - Modern Tasarım */
+.schedule-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 2rem 0;
 }
 
-.schedule-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #C41E3A 0%, #FFD700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
-  text-align: center;
-  position: relative;
-  /* Fallback for browsers that don't support background-clip */
-  color: #C41E3A;
+/* Program Özeti */
+.schedule-overview {
+  margin-bottom: 4rem;
 }
 
-.schedule-subtitle {
-  text-align: center;
-  font-size: 1.3rem;
-  color: #6B7280;
-  margin-bottom: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.schedule-day {
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   margin-bottom: 3rem;
 }
 
-.day-header {
-  background: var(--gradient-primary);
-  color: white;
+.stat-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  border-radius: 20px;
   padding: 2rem;
-  border-radius: var(--border-radius-xl);
-  margin-bottom: 3rem;
   text-align: center;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 40px rgba(196, 30, 58, 0.1);
+  border: 1px solid rgba(196, 30, 58, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.day-title {
-  font-size: 2.2rem;
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(196, 30, 58, 0.2);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
   font-weight: 700;
+  color: var(--cumhuriyet-red);
   margin-bottom: 0.5rem;
 }
 
-.day-date {
-  font-size: 1.2rem;
-  opacity: 0.9;
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
+/* Gün Bölümleri */
+.day-section {
+  margin-bottom: 4rem;
+}
+
+.day-header {
+  background: linear-gradient(135deg, var(--cumhuriyet-red) 0%, #8B1538 100%);
+  border-radius: 24px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.day-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.day-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.day-info {
+  flex: 1;
+}
+
+.day-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.day-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Timeline */
 .schedule-timeline {
   position: relative;
   padding-left: 2rem;
@@ -63,143 +117,200 @@
 .schedule-timeline::before {
   content: '';
   position: absolute;
-  left: 1rem;
+  left: 2rem;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: var(--border-light);
+  width: 3px;
+  background: linear-gradient(to bottom, var(--cumhuriyet-red), var(--cumhuriyet-gold));
+  border-radius: 2px;
 }
 
 .schedule-item {
   position: relative;
-  margin-bottom: 2.5rem;
-  background: var(--surface-card);
-  border-radius: var(--border-radius-xl);
-  padding: 2rem;
-  box-shadow: var(--shadow-lg);
-  margin-left: 1rem;
-  border: 1px solid var(--border-light);
-  transition: var(--transition-smooth);
-}
-
-.schedule-item:hover {
-  transform: translateX(4px);
-  box-shadow: var(--shadow-xl);
-}
-
-.schedule-item::before {
-  content: '';
-  position: absolute;
-  left: -1.5rem;
-  top: 1.5rem;
-  width: 12px;
-  height: 12px;
-  background: var(--cumhuriyet-red);
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px var(--border-light);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .schedule-time {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--cumhuriyet-red);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
+  min-width: 120px;
+  text-align: right;
+  padding-top: 0.5rem;
 }
 
-.schedule-activity {
-  font-size: 1.4rem;
+.time-text {
+  font-size: 1.1rem;
   font-weight: 600;
+  color: var(--cumhuriyet-red);
+  background: rgba(196, 30, 58, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.schedule-content-item {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(196, 30, 58, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.schedule-content-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-content-item::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 1.5rem;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 3px solid var(--cumhuriyet-red);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.schedule-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.schedule-details {
+  flex: 1;
+}
+
+.schedule-title {
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .schedule-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .schedule-location {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  font-size: 1rem;
-  color: var(--cumhuriyet-gold);
-  background: rgba(196, 30, 58, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius-md);
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--cumhuriyet-red);
   font-weight: 500;
 }
 
-.schedule-location i {
-  margin-right: 0.5rem;
+.location-icon {
+  font-size: 1rem;
 }
 
-.schedule-break {
-  background: var(--surface-secondary);
-  border: 1px dashed var(--border-light);
-}
-
-.schedule-break .schedule-activity {
-  color: var(--text-secondary);
-  font-style: italic;
-}
-
-.schedule-highlight {
-  border-left: 4px solid var(--cumhuriyet-gold);
-}
-
+/* Önemli Notlar */
 .schedule-notes {
-  background: var(--surface-card);
-  border-radius: var(--border-radius-xl);
-  padding: 2.5rem;
-  margin-top: 3rem;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-light);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9));
+  border-radius: 24px;
+  padding: 3rem;
+  border: 1px solid rgba(196, 30, 58, 0.1);
+  box-shadow: 0 20px 40px rgba(196, 30, 58, 0.1);
 }
 
-.schedule-notes h3 {
+.notes-title {
   font-size: 2rem;
-  font-weight: 600;
-  color: var(--cumhuriyet-gold);
-  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--cumhuriyet-red);
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.notes-list {
-  list-style: none;
-  padding: 0;
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-.notes-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border-light);
+.note-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(196, 30, 58, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.note-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.note-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.note-card p {
   font-size: 0.95rem;
   color: var(--text-secondary);
-  position: relative;
-  padding-left: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.notes-list li:last-child {
-  border-bottom: none;
-}
-
-.notes-list li::before {
-  content: '•';
-  color: var(--cumhuriyet-red);
-  position: absolute;
-  left: 0.5rem;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .schedule-container {
-    padding: 1rem;
+  .schedule-page {
+    padding: 1rem 0;
   }
   
-  .schedule-title {
+  .overview-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .day-header {
+    padding: 2rem;
+  }
+  
+  .day-title-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .day-number {
+    font-size: 3rem;
+  }
+  
+  .day-title {
     font-size: 2rem;
   }
   
@@ -207,20 +318,35 @@
     padding-left: 1rem;
   }
   
+  .schedule-timeline::before {
+    left: 1rem;
+  }
+  
   .schedule-item {
-    margin-left: 0.5rem;
-    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
   
-  .schedule-item::before {
-    left: -1.25rem;
+  .schedule-time {
+    text-align: left;
+    min-width: auto;
   }
   
-  .day-header {
-    padding: 1rem;
+  .schedule-content-item::before {
+    left: -1.5rem;
   }
   
-  .day-title {
-    font-size: 1.5rem;
+  .schedule-content-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .notes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .schedule-notes {
+    padding: 2rem;
   }
 }
