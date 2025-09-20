@@ -250,6 +250,45 @@ const Schedule: React.FC = () => {
             </div>
           </div>
 
+          {/* 2. Gün */}
+          <div className="day-section">
+            <div className="day-header">
+              <div className="day-title-wrapper">
+                <span className="day-number">2</span>
+                <div className="day-info">
+                  <h2 className="day-title">İkinci Gün</h2>
+                  <p className="day-description">Komite çalışmaları ve final sunumları</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="schedule-timeline">
+              {day2Schedule.map((item, index) => (
+                <div key={index} className="schedule-item">
+                  <div className="schedule-time">
+                    <span className="time-text">{item.time}</span>
+                  </div>
+                  <div className="schedule-content-item">
+                    <div 
+                      className="schedule-icon" 
+                      style={{ backgroundColor: getTypeColor(item.type) }}
+                    >
+                      {getTypeIcon(item.type)}
+                    </div>
+                    <div className="schedule-details">
+                      <h4 className="schedule-title">{item.title}</h4>
+                      <p className="schedule-description">{item.description}</p>
+                      <div className="schedule-location">
+                        <span className="location-icon">📍</span>
+                        <span>{item.location}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Önemli Notlar */}
           <div className="schedule-notes">
             <h3 className="notes-title">Önemli Notlar</h3>
