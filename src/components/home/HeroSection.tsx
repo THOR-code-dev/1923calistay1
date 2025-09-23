@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTES, EVENT_INFO } from '../../utils/constants';
+import CountdownTimer from './CountdownTimer';
 import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
@@ -92,6 +93,9 @@ const HeroSection: React.FC = () => {
                 </p>
               </div>
             </div>
+            
+            {/* Countdown Timer */}
+            <CountdownTimer />
             
             <div className="hero-decoration">
               <div className="decoration-circle circle-1"></div>

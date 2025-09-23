@@ -76,9 +76,9 @@ const DateTime: React.FC = () => {
                 <div className="pricing-summary">
                   <p>Başvuru ücretleri:</p>
                   <ul className="price-list">
-                    <li>Erken başvuru: <strong>{APPLICATION_FEES.early.price}₺</strong> ({APPLICATION_FEES.early.deadline} tarihine kadar)</li>
-                    <li>Normal başvuru: <strong>{APPLICATION_FEES.normal.price}₺</strong> ({APPLICATION_FEES.normal.deadline} tarihine kadar)</li>
-                    <li>Geç başvuru: <strong>{APPLICATION_FEES.late.price}₺</strong> ({APPLICATION_FEES.late.deadline} tarihine kadar)</li>
+                    <li>Erken başvuru: <strong>{APPLICATION_FEES.early.price}₺</strong> (27 Eylül 2025 tarihine kadar)</li>
+                    <li>Normal başvuru: <strong>{APPLICATION_FEES.normal.price}₺</strong> (5 Ekim 2025 tarihine kadar)</li>
+                    <li>Geç başvuru: <strong>{APPLICATION_FEES.late.price}₺</strong> (12 Ekim 2025 tarihine kadar)</li>
                   </ul>
                 </div>
               </div>

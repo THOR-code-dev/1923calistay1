@@ -105,17 +105,17 @@ const Contact: React.FC = () => {
                     <div className="price-item">
                       <span className="price-label">🚀 {APPLICATION_FEES.early.label}</span>
                       <span className="price-value">{APPLICATION_FEES.early.price}₺</span>
-                      <span className="price-deadline">({APPLICATION_FEES.early.deadline} tarihine kadar)</span>
+                      <span className="price-deadline">(27 Eylül 2025 tarihine kadar)</span>
                     </div>
                     <div className="price-item">
                       <span className="price-label">⭐ {APPLICATION_FEES.normal.label}</span>
                       <span className="price-value">{APPLICATION_FEES.normal.price}₺</span>
-                      <span className="price-deadline">({APPLICATION_FEES.normal.deadline} tarihine kadar)</span>
+                      <span className="price-deadline">(5 Ekim 2025 tarihine kadar)</span>
                     </div>
                     <div className="price-item">
                       <span className="price-label">⚡ {APPLICATION_FEES.late.label}</span>
                       <span className="price-value">{APPLICATION_FEES.late.price}₺</span>
-                      <span className="price-deadline">({APPLICATION_FEES.late.deadline} tarihine kadar)</span>
+                      <span className="price-deadline">(12 Ekim 2025 tarihine kadar)</span>
                     </div>
                     <p className="pricing-note">Yemek ve içecek ikramları dahildir.</p>
                   </div>
