@@ -32,7 +32,7 @@ const Application: React.FC = () => {
                   resmi başvuru formuna yönlendirilirsiniz.
                 </p>
                 <a 
-                  href={EVENT_INFO.applicationForm}
+                  href={EVENT_INFO.basvuruForm}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="external-form-button"

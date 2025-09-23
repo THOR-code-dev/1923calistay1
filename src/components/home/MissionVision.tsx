@@ -71,7 +71,7 @@ const MissionVision: React.FC = () => {
               </p>
               <p>
                 Farklılıkların zenginlik kabul edildiği, çok sesliliğin güç verdiği ve 
-                <strong>demokratik katılımı</strong> önceleyen bir kültür inşa etmek istiyoruz.
+                 <strong> demokratik katılımı</strong> önceleyen bir kültür inşa etmek istiyoruz.
               </p>
             </div>
             <div className="card-features">

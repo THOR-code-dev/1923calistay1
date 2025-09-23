@@ -31,7 +31,7 @@ export const COMMITTEES = [
     id: 'hukuk',
     name: 'Hukuk',
     description: 'Cumhuriyet döneminin hukuki reformları ve modern hukuk sisteminin temelleri',
-    icon: '⚖️',
+    icon: '/images/kapakfoto/hukuk.png',
     moderators: [
       {
         name: 'Deniz Selçuk',
@@ -54,7 +54,7 @@ export const COMMITTEES = [
     id: 'psikoloji',
     name: 'Psikoloji',
     description: 'Toplumsal değişimin bireysel ve kolektif psikolojik etkileri',
-    icon: '🧠',
+    icon: '/images/kapakfoto/psikoloji.png',
     moderators: [
       {
         name: 'Asilzana Bozbay',
@@ -81,7 +81,7 @@ export const COMMITTEES = [
     id: 'sosyoloji',
     name: 'Sosyoloji',
     description: 'Cumhuriyet\'in sosyal yapı ve toplumsal dönüşüm üzerindeki etkisi',
-    icon: '👥',
+    icon: '/images/kapakfoto/sosyoloji.png',
     moderators: [
       {
         name: 'Rabia Başar Kaş ve Derin Efsa Çakır',
@@ -103,7 +103,7 @@ export const COMMITTEES = [
     id: 'uluslararasi-iliskiler',
     name: 'Uluslararası İlişkiler',
     description: 'Türkiye\'nin uluslararası konumu ve diplomasi tarihçesi',
-    icon: '🌍',
+    icon: '/images/kapakfoto/uluslararası ilişkiler.png',
     moderators: [
       {
         name: 'Asya Ertuğrul',
@@ -130,7 +130,7 @@ export const COMMITTEES = [
     id: 'felsefe',
     name: 'Felsefe',
     description: 'Cumhuriyet düşüncesinin felsefi temelleri ve modern değerler',
-    icon: '💭',
+    icon: '/images/kapakfoto/felsefe.png',
     moderators: [
       {
         name: 'H. Feyzan Sincar',
@@ -154,7 +154,7 @@ export const COMMITTEES = [
     id: 'siyaset',
     name: 'Siyaset',
     description: 'Demokratik sistem, siyasi katılım ve vatandaşlık bilinci',
-    icon: '🏛️',
+    icon: '/images/kapakfoto/siyaset.png',
     moderators: [
       {
         name: 'Efe Yanık',
@@ -178,7 +178,7 @@ export const COMMITTEES = [
     id: 'tarih',
     name: 'Cumhuriyet Tarihi',
     description: 'Cumhuriyet\'in kuruluş süreci ve tarihsel önemi',
-    icon: '📚',
+    icon: '/images/kapakfoto/cumhuriyet tarihi.png',
     moderators: [
       {
         name: 'Berkan Bahadır Kışlakçı',
@@ -204,7 +204,7 @@ export const COMMITTEES = [
     id: 'edebiyat',
     name: 'Edebiyat',
     description: 'Cumhuriyet dönemi edebiyatı ve kültürel dönüşüm',
-    icon: '✍️',
+    icon: '/images/kapakfoto/edebiyat.png',
     moderators: [
       {
         name: 'Adalet Nesrin Helvacı',
@@ -231,7 +231,7 @@ export const COMMITTEES = [
     id: 'ekonomi',
     name: 'Ekonomi',
     description: 'Ekonomik kalkınma modelleri ve sosyal refah politikaları',
-    icon: '💰',
+    icon: '/images/kapakfoto/ekonomi.png',
     moderators: [
       {
         name: 'Ayşe Ece Yavuz',
@@ -258,7 +258,7 @@ export const COMMITTEES = [
     id: 'egitim',
     name: 'Eğitim',
     description: 'Eğitim reformları ve toplumsal gelişimdeki rolü',
-    icon: '🎓',
+    icon: '/images/kapakfoto/eğitim.png',
     moderators: [
       {
         name: 'Ece Gürlek',
@@ -286,7 +286,7 @@ export const COMMITTEES = [
     id: 'teoloji',
     name: 'Teoloji',
     description: 'Din ve toplum ilişkisi, sekülerleşme süreci',
-    icon: '🕌',
+    icon: '/images/kapakfoto/teoloji.png',
     moderators: [
       {
         name: 'Hamza Zile',
@@ -354,5 +354,28 @@ export const EVENT_INFO = {
   time: '09:00 - 17:00',
   location: 'İstinye Üniversitesi Topkapı Yerleşkesi',
   applicationDeadline: '2025-10-01',
-  applicationForm: 'https://docs.google.com/forms/d/e/1FAIpQLScbzQzTGmaIlQNH_ZcO4uD3WeI_JYfGd3LmRwglHmMnWmOCtQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAacoGLcnCvBx3vJXg-OYa6Y5cxZBEM1dLOWcz1DT_cVgQ4AAgL0kIpJYtB3-fQ_aem_16ZZ4DUwToS5POlpOl-gMQ'
+  applicationForm: 'https://docs.google.com/forms/d/e/1FAIpQLScbzQzTGmaIlQNH_ZcO4uD3WeI_JYfGd3LmRwglHmMnWmOCtQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAacoGLcnCvBx3vJXg-OYa6Y5cxZBEM1dLOWcz1DT_cVgQ4AAgL0kIpJYtB3-fQ_aem_16ZZ4DUwToS5POlpOl-gMQ',
+  basvuruForm: "https://docs.google.com/forms/d/e/1FAIpQLSdeMUBdCLb7e9R1PvV_ULtr0SyiBsB0yQU9PIoHowrSunLs7g/viewform",
+} as const;
+
+// Başvuru Ücretleri
+export const APPLICATION_FEES = {
+  early: {
+    price: 700,
+    label: 'Erken Başvuru',
+    deadline: '2025-09-15',
+    description: 'İlk başvuru döneminde indirimli fiyat'
+  },
+  normal: {
+    price: 750,
+    label: 'Normal Başvuru',
+    deadline: '2025-09-25',
+    description: 'Standart başvuru ücreti'
+  },
+  late: {
+    price: 800,
+    label: 'Geç Başvuru',
+    deadline: '2025-10-01',
+    description: 'Son başvuru döneminde ek ücret'
+  }
 } as const;

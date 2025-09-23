@@ -1,5 +1,5 @@
 import React from 'react';
-import { CONTACT_INFO } from '../utils/constants';
+import { CONTACT_INFO, APPLICATION_FEES } from '../utils/constants';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -100,8 +100,25 @@ const Contact: React.FC = () => {
               <div className="faq-item modern">
                 <div className="faq-icon">💰</div>
                 <div className="faq-content">
-                  <h4>Etkinlik ücretsiz mi?</h4>
-                  <p>Evet, 1923 Çalıştayı tamamen ücretsizdir. Yemek ve içecek ikramları da dahildir.</p>
+                  <h4>Başvuru ücretleri nasıl?</h4>
+                  <div className="pricing-info">
+                    <div className="price-item">
+                      <span className="price-label">🚀 {APPLICATION_FEES.early.label}</span>
+                      <span className="price-value">{APPLICATION_FEES.early.price}₺</span>
+                      <span className="price-deadline">({APPLICATION_FEES.early.deadline} tarihine kadar)</span>
+                    </div>
+                    <div className="price-item">
+                      <span className="price-label">⭐ {APPLICATION_FEES.normal.label}</span>
+                      <span className="price-value">{APPLICATION_FEES.normal.price}₺</span>
+                      <span className="price-deadline">({APPLICATION_FEES.normal.deadline} tarihine kadar)</span>
+                    </div>
+                    <div className="price-item">
+                      <span className="price-label">⚡ {APPLICATION_FEES.late.label}</span>
+                      <span className="price-value">{APPLICATION_FEES.late.price}₺</span>
+                      <span className="price-deadline">({APPLICATION_FEES.late.deadline} tarihine kadar)</span>
+                    </div>
+                    <p className="pricing-note">Yemek ve içecek ikramları dahildir.</p>
+                  </div>
                 </div>
               </div>
               

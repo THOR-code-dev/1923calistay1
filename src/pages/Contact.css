@@ -512,3 +512,66 @@
     padding: 2rem;
   }
 }
+
+/* Pricing Styles */
+.pricing-info {
+  margin-top: 1rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.05), rgba(255, 215, 0, 0.05));
+  border-radius: 12px;
+  border: 1px solid rgba(196, 30, 58, 0.1);
+  transition: all 0.3s ease;
+}
+
+.price-item:hover {
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 215, 0, 0.1));
+  transform: translateX(4px);
+}
+
+.price-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.price-value {
+  font-weight: 700;
+  color: var(--cumhuriyet-red);
+  font-size: 1.1rem;
+}
+
+.price-deadline {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.pricing-note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .price-deadline {
+    font-size: 0.75rem;
+  }
+}

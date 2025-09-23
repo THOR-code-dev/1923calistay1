@@ -10,7 +10,7 @@ const Committees: React.FC = () => {
         <div className="page-header">
           <h1 className="page-title">Komiteler</h1>
           <p className="page-subtitle">
-            11 farklı alanda derinlemesine tartışma ve öğrenme fırsatı
+            10 farklı alanda derinlemesine tartışma ve öğrenme fırsatı
           </p>
         </div>
 
@@ -22,7 +22,17 @@ const Committees: React.FC = () => {
               className="committee-card-link"
             >
               <div className="committee-card">
-                <div className="committee-icon">{committee.icon}</div>
+                <div className="committee-icon">
+                  <img 
+                    src={committee.icon} 
+                    alt={committee.name} 
+                    className="committee-icon-img"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
                 <h3 className="committee-name">{committee.name}</h3>
                 <p className="committee-description">{committee.description}</p>
                 <div className="committee-footer">

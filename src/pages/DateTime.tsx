@@ -1,5 +1,5 @@
 import React from 'react';
-import { EVENT_INFO } from '../utils/constants';
+import { EVENT_INFO, APPLICATION_FEES } from '../utils/constants';
 import './DateTime.css';
 
 const DateTime: React.FC = () => {
@@ -72,8 +72,15 @@ const DateTime: React.FC = () => {
             <h2 className="section-title">Önemli Notlar</h2>
             <div className="notes-content">
               <div className="note-item">
-                <span className="note-icon">📋</span>
-                <p>Etkinlik ücretsizdir, sadece başvuru gereklidir</p>
+                <span className="note-icon">💰</span>
+                <div className="pricing-summary">
+                  <p>Başvuru ücretleri:</p>
+                  <ul className="price-list">
+                    <li>Erken başvuru: <strong>{APPLICATION_FEES.early.price}₺</strong> ({APPLICATION_FEES.early.deadline} tarihine kadar)</li>
+                    <li>Normal başvuru: <strong>{APPLICATION_FEES.normal.price}₺</strong> ({APPLICATION_FEES.normal.deadline} tarihine kadar)</li>
+                    <li>Geç başvuru: <strong>{APPLICATION_FEES.late.price}₺</strong> ({APPLICATION_FEES.late.deadline} tarihine kadar)</li>
+                  </ul>
+                </div>
               </div>
               <div className="note-item">
                 <span className="note-icon">🍽️</span>

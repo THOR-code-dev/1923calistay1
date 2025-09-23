@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           <Link to="/" className="logo" onClick={closeMenu}>
             <div className="logo-content">
               <span className="logo-year">1923</span>
-              <span className="logo-text">Çalıştay</span>
+              <span className="logo-text">Genç</span>
             </div>
           </Link>
 

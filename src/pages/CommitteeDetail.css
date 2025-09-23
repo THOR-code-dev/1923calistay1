@@ -87,14 +87,30 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 193, 7, 0.1));
-  border-radius: var(--border-radius-xl);
+  border-radius: 50%;
   flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+  border: 4px solid rgba(196, 30, 58, 0.2);
+}
+
+.committee-icon-large-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .committee-header:hover .committee-icon-large {
   transform: rotate(10deg) scale(1.1);
   background: linear-gradient(135deg, rgba(196, 30, 58, 0.2), rgba(255, 193, 7, 0.2));
+}
+
+.committee-header:hover .committee-icon-large-img {
+  transform: scale(1.1);
 }
 
 .committee-header-content {

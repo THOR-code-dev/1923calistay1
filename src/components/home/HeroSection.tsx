@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
             
             <div className="hero-stats">
               <div className="stat-item">
-                <span className="stat-number">10</span>
+                <span className="stat-number">11</span>
                 <span className="stat-label">Komite</span>
               </div>
               <div className="stat-item">

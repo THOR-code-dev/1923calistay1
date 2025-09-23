@@ -272,3 +272,41 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Pricing Summary Styles */
+.pricing-summary {
+  margin-top: 0.5rem;
+}
+
+.pricing-summary p {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-list li {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.05), rgba(255, 215, 0, 0.05));
+  border-radius: 8px;
+  border-left: 3px solid var(--cumhuriyet-red);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.price-list li:hover {
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 215, 0, 0.1));
+  transform: translateX(4px);
+}
+
+.price-list li strong {
+  color: var(--cumhuriyet-red);
+  font-weight: 700;
+}

@@ -33,7 +33,17 @@ const CommitteeDetail: React.FC = () => {
 
         {/* Header */}
         <div className="committee-header">
-          <div className="committee-icon-large">{committee.icon}</div>
+          <div className="committee-icon-large">
+            <img 
+              src={committee.icon} 
+              alt={committee.name} 
+              className="committee-icon-large-img"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
+            />
+          </div>
           <div className="committee-header-content">
             <h1 className="committee-title">{committee.name} Komitesi</h1>
             <p className="committee-description-large">{committee.description}</p>
