@@ -9,7 +9,9 @@ const MissionVision: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="title-highlight">Misyonumuz</span> & Vizyonumuz
+            <span className="title-highlight">Misyonumuz</span>
+            <span className="title-separator">&</span>
+            <span className="title-vision">Vizyonumuz</span>
           </h2>
           <p className="section-subtitle">
             Cumhuriyet değerlerini yaşatan, geleceği şekillendiren gençlik platformu
