@@ -11,17 +11,16 @@ interface TimeLeft {
 
 const CountdownTimer: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [currentPeriod, setCurrentPeriod] = useState<'early' | 'normal' | 'late' | 'ended'>('early');
+  const [currentPeriod, setCurrentPeriod] = useState<'normal' | 'late' | 'ended'>('normal');
 
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
-      const earlyDeadline = new Date('2025-09-27T23:59:59').getTime();
       const normalDeadline = new Date('2025-10-05T23:59:59').getTime();
       const lateDeadline = new Date('2025-10-12T23:59:59').getTime();
 
-      let targetDate = earlyDeadline;
-      let period: 'early' | 'normal' | 'late' | 'ended' = 'early';
+      let targetDate = normalDeadline;
+      let period: 'normal' | 'late' | 'ended' = 'normal';
 
       if (now > lateDeadline) {
         period = 'ended';
@@ -29,9 +28,6 @@ const CountdownTimer: React.FC = () => {
       } else if (now > normalDeadline) {
         period = 'late';
         targetDate = lateDeadline;
-      } else if (now > earlyDeadline) {
-        period = 'normal';
-        targetDate = normalDeadline;
       }
 
       setCurrentPeriod(period);
@@ -63,26 +59,19 @@ const CountdownTimer: React.FC = () => {
 
   const getCurrentPeriodInfo = () => {
     switch (currentPeriod) {
-      case 'early':
-        return {
-          title: 'Erken Başvuru',
-          price: APPLICATION_FEES.early.price,
-          color: 'success',
-          message: 'En uygun fiyata başvur!'
-        };
       case 'normal':
         return {
           title: 'Normal Başvuru',
           price: APPLICATION_FEES.normal.price,
           color: 'warning',
-          message: 'Standart başvuru dönemi'
+          message: 'Normal başvuru dönemi devam ediyor! Bireysel: 600₺, Delegasyon: 550₺'
         };
       case 'late':
         return {
           title: 'Geç Başvuru',
           price: APPLICATION_FEES.late.price,
           color: 'danger',
-          message: 'Son şans!'
+          message: 'Son şans! Geç başvuru fiyatı: 800₺'
         };
       case 'ended':
         return {

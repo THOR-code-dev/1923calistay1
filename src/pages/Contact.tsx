@@ -103,19 +103,19 @@ const Contact: React.FC = () => {
                   <h4>Başvuru ücretleri nasıl?</h4>
                   <div className="pricing-info">
                     <div className="price-item">
-                      <span className="price-label">🚀 {APPLICATION_FEES.early.label}</span>
-                      <span className="price-value">{APPLICATION_FEES.early.price}₺</span>
-                      <span className="price-deadline">(27 Eylül 2025 tarihine kadar)</span>
+                      <span className="price-label">⭐ Normal Bireysel Başvuru</span>
+                      <span className="price-value">600₺</span>
+                      <span className="price-deadline">(05/10/2025 tarihine kadar)</span>
                     </div>
                     <div className="price-item">
-                      <span className="price-label">⭐ {APPLICATION_FEES.normal.label}</span>
-                      <span className="price-value">{APPLICATION_FEES.normal.price}₺</span>
-                      <span className="price-deadline">(5 Ekim 2025 tarihine kadar)</span>
+                      <span className="price-label">⭐ Normal Delegasyon Başvuru</span>
+                      <span className="price-value">550₺</span>
+                      <span className="price-deadline">(05/10/2025 tarihine kadar)</span>
                     </div>
                     <div className="price-item">
-                      <span className="price-label">⚡ {APPLICATION_FEES.late.label}</span>
-                      <span className="price-value">{APPLICATION_FEES.late.price}₺</span>
-                      <span className="price-deadline">(12 Ekim 2025 tarihine kadar)</span>
+                      <span className="price-label">⚡ Geç Başvuru</span>
+                      <span className="price-value">800₺</span>
+                      <span className="price-deadline">(12/10/2025 tarihine kadar)</span>
                     </div>
                     <p className="pricing-note">Yemek ve içecek ikramları dahildir.</p>
                   </div>

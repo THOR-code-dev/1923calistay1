@@ -353,29 +353,29 @@ export const EVENT_INFO = {
   date: '11-12 Ekim 2025',
   time: '09:00 - 17:00',
   location: 'İstinye Üniversitesi Topkapı Yerleşkesi',
-  applicationDeadline: '2025-10-12',
+  applicationDeadline: '12/10/2025',
   applicationForm: 'https://docs.google.com/forms/d/e/1FAIpQLScbzQzTGmaIlQNH_ZcO4uD3WeI_JYfGd3LmRwglHmMnWmOCtQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAacoGLcnCvBx3vJXg-OYa6Y5cxZBEM1dLOWcz1DT_cVgQ4AAgL0kIpJYtB3-fQ_aem_16ZZ4DUwToS5POlpOl-gMQ',
   basvuruForm: "https://docs.google.com/forms/d/e/1FAIpQLSdeMUBdCLb7e9R1PvV_ULtr0SyiBsB0yQU9PIoHowrSunLs7g/viewform",
 } as const;
 
 // Başvuru Ücretleri
 export const APPLICATION_FEES = {
-  early: {
-    price: 700,
-    label: 'Erken Başvuru',
-    deadline: '2025-09-27',
-    description: 'İlk başvuru döneminde indirimli fiyat'
-  },
   normal: {
-    price: 750,
-    label: 'Normal Başvuru',
-    deadline: '2025-10-05',
+    price: 600,
+    label: 'Normal Bireysel Başvuru',
+    deadline: '05/10/2025',
     description: 'Standart başvuru ücreti'
+  },
+  normalDelegation: {
+    price: 550,
+    label: 'Normal Delegasyon Başvuru',
+    deadline: '05/10/2025',
+    description: 'Delegasyon başvurusu için özel fiyat'
   },
   late: {
     price: 800,
     label: 'Geç Başvuru',
-    deadline: '2025-10-12',
+    deadline: '12/10/2025',
     description: 'Son başvuru döneminde ek ücret'
   }
 } as const;
