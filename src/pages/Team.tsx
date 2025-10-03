@@ -4,56 +4,105 @@ import './Team.css';
 
 const Team: React.FC = () => {
   const teamMembers = [
+    // Genel Koordinatörler
     {
-      name: 'Ahmet Yılmaz',
+      name: 'Berru Yaşlı',
       role: 'Genel Koordinatör',
       description: 'Proje yönetimi ve genel koordinasyon',
-      image: '👨‍💼',
-      contact: 'ahmet@1923calistay.org'
+      image: '/team/berru-yasli.jpg',
+      
     },
     {
-      name: 'Zeynep Kaya',
-      role: 'Akademik Koordinatör',
-      description: 'Komite içerikleri ve akademik program',
-      image: '👩‍🎓',
-      contact: 'zeynep@1923calistay.org'
+      name: 'Elifnur Yaşlı',
+      role: 'Genel Koordinatör',
+      description: 'Proje yönetimi ve genel koordinasyon',
+      image: '/team/elifnur-yasli.jpg',
+      
+    },
+    // Finans
+    {
+      name: 'Ahmet Keskin',
+      role: 'Finans Ekip Başkanı',
+      description: 'Bütçe yönetimi ve finansal planlama',
+      image: '/team/ahmet-keskin.jpg',
+      
     },
     {
-      name: 'Mehmet Demir',
-      role: 'Organizasyon Sorumlusu',
+      name: 'Öykü Arslan',
+      role: 'Finans Ekip Başkanı',
+      description: 'Bütçe yönetimi ve finansal planlama',
+      image: '/team/oyku-arslan.jpg',
+      
+    },
+    // Halkla İlişkiler
+    {
+      name: 'Ahmet Salim Yıldırım',
+      role: 'Halkla İlişkiler Ekip Başkanı',
+      description: 'İletişim ve tanıtım faaliyetleri',
+      image: '/team/ahmet-salim-yildirim.jpg',
+      
+    },
+    {
+      name: 'Beyza Bakın',
+      role: 'Halkla İlişkiler Ekip Başkanı',
+      description: 'İletişim ve tanıtım faaliyetleri',
+      image: '/team/beyza-bakin.jpg',
+      
+    },
+    {
+      name: 'Kayra Anıl Kılıç',
+      role: 'Halkla İlişkiler Ekip Başkanı',
+      description: 'İletişim ve tanıtım faaliyetleri',
+      image: '/team/kayra-anil-kilic.jpg',
+      
+    },
+    {
+      name: 'M. Asım Adıgüzel',
+      role: 'Halkla İlişkiler Ekip Başkanı',
+      description: 'İletişim ve tanıtım faaliyetleri',
+      image: '/team/asim-adiguzel.png',
+      imagePosition: 'center 30%'
+    },
+    // IT
+    {
+      name: 'Emira İnal',
+      role: 'IT Ekip Başkanı',
+      description: 'Teknoloji altyapısı ve dijital çözümler',
+      image: '/team/emira-inal.jpg',
+      
+    },
+    {
+      name: 'Batuhan Bilgin',
+      role: 'IT Ekip Başkanı',
+      description: 'Teknoloji altyapısı ve dijital çözümler',
+      image: '/team/batuhan-bilgin.jpeg',
+      imagePosition: '60% center'
+    },
+    // Saha
+    {
+      name: 'Hayrunnisa Demir',
+      role: 'Saha Ekip Başkanı',
       description: 'Etkinlik organizasyonu ve lojistik',
-      image: '👨‍💻',
-      contact: 'mehmet@1923calistay.org'
+      image: '/team/hayrunnisa-demir.jpg',
+      
     },
     {
-      name: 'Ayşe Özkan',
-      role: 'İletişim Sorumlusu',
-      description: 'Sosyal medya ve kurumsal iletişim',
-      image: '👩‍💼',
-      contact: 'ayse@1923calistay.org'
+      name: 'Hümeyra Yener',
+      role: 'Saha Ekip Başkanı',
+      description: 'Etkinlik organizasyonu ve lojistik',
+      image: '/team/humeyra-yener.jpg',
+      
+    },
+    // İnsan Kaynakları
+    {
+      name: 'Şehnaz Torak',
+      role: 'İnsan Kaynakları Ekip Başkanı',
+      description: 'Ekip yönetimi ve gönüllü koordinasyonu',
+      image: '/team/sehnaz-torak.jpg',
+      
     }
   ];
 
-  const advisors = [
-    {
-      name: 'Prof. Dr. Ali Vural',
-      role: 'Akademik Danışman',
-      field: 'Tarih',
-      institution: 'İstanbul Üniversitesi'
-    },
-    {
-      name: 'Doç. Dr. Elif Şahin',
-      role: 'Akademik Danışman',
-      field: 'Siyaset Bilimi',
-      institution: 'Ankara Üniversitesi'
-    },
-    {
-      name: 'Dr. Öğr. Üyesi Murat Çelik',
-      role: 'Akademik Danışman',
-      field: 'Sosyoloji',
-      institution: 'Boğaziçi Üniversitesi'
-    }
-  ];
 
   return (
     <div className="team-page">
@@ -76,36 +125,17 @@ const Team: React.FC = () => {
             <div className="team-grid">
               {teamMembers.map((member, index) => (
                 <div key={index} className="team-card">
-                  <div className="member-avatar">{member.image}</div>
+                  <div className="member-avatar">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      style={member.imagePosition ? { objectPosition: member.imagePosition } : {}}
+                    />
+                  </div>
                   <div className="member-info">
                     <h3 className="member-name">{member.name}</h3>
                     <p className="member-role">{member.role}</p>
                     <p className="member-description">{member.description}</p>
-                    <a href={`mailto:${member.contact}`} className="member-contact">
-                      {member.contact}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Akademik Danışmanlar */}
-          <section className="advisors-section">
-            <h2 className="section-title">Akademik Danışmanlar</h2>
-            <p className="section-description">
-              Alanında uzman akademisyenlerimiz, içerik kalitesi ve akademik doğruluk konusunda rehberlik etmektedir.
-            </p>
-            
-            <div className="advisors-grid">
-              {advisors.map((advisor, index) => (
-                <div key={index} className="advisor-card">
-                  <div className="advisor-avatar">🎓</div>
-                  <div className="advisor-info">
-                    <h4 className="advisor-name">{advisor.name}</h4>
-                    <p className="advisor-role">{advisor.role}</p>
-                    <p className="advisor-field">{advisor.field}</p>
-                    <p className="advisor-institution">{advisor.institution}</p>
                   </div>
                 </div>
               ))}
@@ -162,7 +192,7 @@ const Team: React.FC = () => {
             <div className="thanks-content">
               <p>
                 Bu projenin hayata geçmesinde emeği geçen tüm gönüllülere, 
-                akademik danışmanlarımıza, destekçi kurumlara ve ailelerimize 
+                destekçi kurumlara ve ailelerimize 
                 sonsuz teşekkürlerimizi sunuyoruz.
               </p>
               <div className="thanks-badges">

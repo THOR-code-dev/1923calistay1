@@ -4,133 +4,147 @@ import './Schedule.css';
 const Schedule: React.FC = () => {
   const day1Schedule = [
     {
-      time: '09:00 - 09:30',
-      title: 'Kayıt ve Karşılama',
+      time: '9.00-10.00',
+      title: 'Kayıt, Kahvaltı',
       description: 'Katılımcı kayıtları ve hoş geldin kahvaltısı',
       type: 'registration',
       location: 'Ana Giriş'
     },
     {
-      time: '09:30 - 10:15',
-      title: 'Açılış Töreni',
+      time: '10.00-10.30',
+      title: 'Açılış Seremonisi',
       description: 'Hoş geldin konuşması ve çalıştay tanıtımı',
       type: 'ceremony',
       location: 'Ana Konferans Salonu'
     },
     {
-      time: '10:15 - 10:30',
-      title: 'Kahve Molası',
-      description: 'Tanışma ve networking',
-      type: 'break',
-      location: 'Foyer Alanı'
-    },
-    {
-      time: '10:30 - 12:00',
-      title: 'Komite Tanıtımları',
-      description: 'Her komitenin kendini tanıtması ve hedeflerinin paylaşılması',
-      type: 'presentation',
-      location: 'Ana Konferans Salonu'
-    },
-    {
-      time: '12:00 - 13:00',
-      title: 'Öğle Yemeği',
-      description: 'Yemek ve sosyalleşme',
-      type: 'meal',
-      location: 'Yemekhane'
-    },
-    {
-      time: '13:00 - 15:30',
-      title: 'İlk Komite Oturumları',
-      description: 'Komitelerde ilk tartışmalar ve konu belirleme',
+      time: '10.30-11.30',
+      title: '1. Oturum',
+      description: 'İlk komite oturumu',
       type: 'committee',
       location: 'Komite Odaları'
     },
     {
-      time: '15:30 - 15:45',
-      title: 'Çay Molası',
-      description: 'Kısa mola ve enerji tazeleme',
+      time: '11.30-12.00',
+      title: 'Ara',
+      description: 'Kahve molası',
       type: 'break',
       location: 'Foyer Alanı'
     },
     {
-      time: '15:45 - 17:30',
-      title: 'Workshop: Etkili İletişim',
-      description: 'Demokratik tartışma teknikleri ve etkili sunum',
-      type: 'workshop',
-      location: 'Workshop Salonu'
+      time: '12.00-13.00',
+      title: 'KORO',
+      description: 'Koro çalışması',
+      type: 'social',
+      location: 'Müzik Salonu'
     },
     {
-      time: '17:30 - 18:00',
-      title: 'Gün Değerlendirmesi',
-      description: 'İlk günün özetlenmesi ve ertesi gün planı',
-      type: 'evaluation',
-      location: 'Ana Konferans Salonu'
+      time: '13.00-14.15',
+      title: 'Öğle',
+      description: 'Öğle yemeği',
+      type: 'meal',
+      location: 'Yemekhane'
+    },
+    {
+      time: '14.15-15.15',
+      title: '2. Oturum',
+      description: 'İkinci komite oturumu',
+      type: 'committee',
+      location: 'Komite Odaları'
+    },
+    {
+      time: '15.15-15.45',
+      title: 'Ara',
+      description: 'Çay molası',
+      type: 'break',
+      location: 'Foyer Alanı'
+    },
+    {
+      time: '15.45-16.45',
+      title: '3.Oturum',
+      description: 'Üçüncü komite oturumu',
+      type: 'committee',
+      location: 'Komite Odaları'
+    },
+    {
+      time: '16.45-17.15',
+      title: 'Ara',
+      description: 'Kısa mola',
+      type: 'break',
+      location: 'Foyer Alanı'
+    },
+    {
+      time: '17.15-18.15',
+      title: '4. Oturum',
+      description: 'Dördüncü komite oturumu',
+      type: 'committee',
+      location: 'Komite Odaları'
     }
   ];
 
   const day2Schedule = [
     {
-      time: '09:00 - 09:30',
-      title: 'Günaydın Kahvesi',
+      time: '9.00-10.00',
+      title: 'Kahvaltı',
       description: 'Güne enerjik başlangıç',
-      type: 'break',
-      location: 'Foyer Alanı'
-    },
-    {
-      time: '09:30 - 11:30',
-      title: 'Komite Çalışmaları',
-      description: 'Derinlemesine tartışmalar ve çözüm önerileri',
-      type: 'committee',
-      location: 'Komite Odaları'
-    },
-    {
-      time: '11:30 - 11:45',
-      title: 'Kahve Molası',
-      description: 'Kısa dinlenme',
-      type: 'break',
-      location: 'Foyer Alanı'
-    },
-    {
-      time: '11:45 - 13:00',
-      title: 'Sunum Hazırlığı',
-      description: 'Komitelerin final sunumlarını hazırlaması',
-      type: 'preparation',
-      location: 'Komite Odaları'
-    },
-    {
-      time: '13:00 - 14:00',
-      title: 'Öğle Yemeği',
-      description: 'Son yemek ve sohbet',
       type: 'meal',
       location: 'Yemekhane'
     },
     {
-      time: '14:00 - 16:00',
-      title: 'Final Sunumları',
-      description: 'Her komitenin çalışmalarını sunması',
-      type: 'presentation',
-      location: 'Ana Konferans Salonu'
+      time: '10.00-11.15',
+      title: '5. Oturum',
+      description: 'Beşinci komite oturumu',
+      type: 'committee',
+      location: 'Komite Odaları'
     },
     {
-      time: '16:00 - 16:15',
-      title: 'Çay Molası',
-      description: 'Son mola',
+      time: '11.15-11.45',
+      title: 'Ara',
+      description: 'Kahve molası',
       type: 'break',
       location: 'Foyer Alanı'
     },
     {
-      time: '16:15 - 17:00',
-      title: 'Kapanış Töreni',
-      description: 'Sertifika töreni ve veda konuşmaları',
-      type: 'ceremony',
+      time: '11.45-13.00',
+      title: 'PANEL',
+      description: 'Panel oturumu',
+      type: 'presentation',
       location: 'Ana Konferans Salonu'
     },
     {
-      time: '17:00 - 17:30',
-      title: 'Fotoğraf Çekimi ve Veda',
-      description: 'Hatıra fotoğrafları ve vedalaşma',
-      type: 'social',
+      time: '13.00-14.00',
+      title: 'Öğle Arası',
+      description: 'Öğle yemeği',
+      type: 'meal',
+      location: 'Yemekhane'
+    },
+    {
+      time: '14.00-15.15',
+      title: '6.Oturum',
+      description: 'Altıncı komite oturumu',
+      type: 'committee',
+      location: 'Komite Odaları'
+    },
+    {
+      time: '15.15-15.45',
+      title: 'Ara',
+      description: 'Çay molası',
+      type: 'break',
       location: 'Foyer Alanı'
+    },
+    {
+      time: '15.45-17.15',
+      title: '7. Oturum',
+      description: 'Yedinci komite oturumu',
+      type: 'committee',
+      location: 'Komite Odaları'
+    },
+    {
+      time: '17.15-18.15',
+      title: 'Kapanış Seremonisi',
+      description: 'Sertifika töreni ve veda konuşmaları',
+      type: 'ceremony',
+      location: 'Ana Konferans Salonu'
     }
   ];
 

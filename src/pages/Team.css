@@ -91,6 +91,14 @@
   font-size: 2.5rem;
   font-weight: 700;
   box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .member-name {
