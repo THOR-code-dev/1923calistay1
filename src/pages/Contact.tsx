@@ -1,5 +1,5 @@
 import React from 'react';
-import { CONTACT_INFO, APPLICATION_FEES } from '../utils/constants';
+import { CONTACT_INFO } from '../utils/constants';
 import './Contact.css';
 
 const Contact: React.FC = () => {

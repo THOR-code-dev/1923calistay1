@@ -1,5 +1,5 @@
 import React from 'react';
-import { EVENT_INFO, APPLICATION_FEES } from '../utils/constants';
+import { EVENT_INFO } from '../utils/constants';
 import './DateTime.css';
 
 const DateTime: React.FC = () => {
